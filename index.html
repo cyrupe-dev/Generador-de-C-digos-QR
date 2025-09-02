@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR</title>
+
+    <!-- WEB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- ------ CSS ------ -->
+    <link rel="stylesheet" href="css/generar-QR.css">
+
+    <!-- ------ ICON ------ -->
+    <link rel="Icon" type="png" href="image/icon.webp">
+
+    <!-- FONT TEXT -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Animar elementos al Scrollear -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="nav-container">
+            <div class="logo" onclick="location.href='';">
+                <div class="logo-top">Cyrupe</div>
+                <div class="logo-bottom">Developer</div>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="https://social-networks-bns.vercel.app/developer.html">MI PLATAFORMA WEB</a></li>
+                    <li><a href="https://social-networks-bns.vercel.app/">REDES SOCIALES</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contenido de la página -->
+        <div class="wrapper" data-aos="fade-up">
+            <div class="content">
+                <div class="top-sobre-mi">¡Hello!, soy Cyrupe</div>
+                <div class="bottom-sobre-mi">Developer</div>
+
+                <div class="social-net">
+
+                    <a href="https://www.instagram.com/rubencarballo.p/" class="social-pill-net" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@rubencarballo.p" class="social-pill-net" title="TikTok" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <img src="image/perfil-cyrupe-developer-grano.webp" class="right-img">
+                </div>
+            </div>
+
+            <!-- Generador de Codigo -->
+            <div class="QR-center">
+                <div class="container">
+                    <div class="qrcode">
+                        <h1>Generador de Códigos QR</h1>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="urlInput" placeholder="Ingresa una URL (ej: https://www.ejemplo.com)" />
+                    </div>
+            
+                    <div class="options">
+                        <div class="format-select">
+                            <label for="formatSelect">Formato de imagen:</label>
+                            <select id="formatSelect">
+                                <option value="png">PNG</option>
+                                <option value="jpg">JPG</option>
+                            </select>
+                        </div>
+                        
+                        <div class="border-size">
+                            <label for="borderSize">Tamaño del borde:</label>
+                            <input type="number" id="borderSize" value="10" min="0" max="50" />
+                        </div>
+                    </div>
+                
+                    <button id="generateBtn">Generar QR</button>
+                    <div class="qrcode">
+                        <div id="qrcode"></div>
+                    </div>
+                    <button id="downloadBtn" class="download-btn">Descargar QR</button>
+                    
+                    <div class="instructions">
+                        <h3>Instrucciones:</h3>
+                        <ul>
+                            <li>Ingresa la URL que deseas convertir en código QR</li>
+                            <li>Selecciona el formato de imagen (PNG o JPG)</li>
+                            <li>Ajusta el tamaño del borde si es necesario</li>
+                            <li>Haz clic en "Generar QR" para crear tu código</li>
+                            <li>Usa el botón "Descargar QR" para guardar la imagen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+     <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div> 
+        <div class="static-footer">
+            <p><b>Creado por Ing. Rubén Carballo</b></p>
+            <p class="block"><i>© 2025 ingeniero Cyrupe. Todos los derechos reservados.</i></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+</html>
+<!-- JS -->
+<script src="js/generar-QR.js"></script>
+<script src="js/hamburger.js"></script>
+<script src="js/animate-on-scroll.js"></script>
